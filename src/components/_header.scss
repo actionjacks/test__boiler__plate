@@ -1,0 +1,32 @@
+.header {
+    .header__menu {
+        width: 100%;
+        overflow: hidden;
+
+        .menu__list {
+            background-color: $first-main-color;
+            display: flex;
+            width: 100%;
+
+            .menu__item {
+                background-color: $second-main-color;
+                list-style: none;
+                flex-basis: 33%;
+
+                .menu__link {
+                    font-size: 1.5em;
+                    text-decoration: none;
+                    color: green;
+
+                    @include media-queries(small) {
+                        font-size: 2em;
+                    }
+
+                    @include media-queries(xlarge) {
+                        font-size: 3em;
+                    }
+                }
+            }
+        }
+    }
+}

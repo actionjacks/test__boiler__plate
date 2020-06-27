@@ -1,0 +1,23 @@
+// all breakpoints 
+$breakpoints: (xsmall:(min-width:460px),
+    small:(min-width:640px),
+    medium:(min-width:800px),
+    large:(min-width:1024px),
+    xlarge:(min-width:1200px),
+    xxlarge:(min-width:1440px),
+);
+
+//mixin do breakpoint
+@mixin media-queries($breakpoint) {
+    $size: map-get($breakpoints, $breakpoint);
+
+    @if(size) {
+        @media #{$size} {
+            @content;
+        }
+    }
+
+    @else {
+        @error '"#{$breakpoint}" - nie ma takiej wielkosci !';
+    }
+}
