@@ -63,11 +63,11 @@ module.exports = {
     // new MiniCssExtractPlugin({
     //   filename: "[name]-[contenthash].css",
     // }),
-    new CopyPlugin([
-      {
-        from: "public/images",
-        to: "images",
-      },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        { from: "public/images", to: "images" },
+        // { from: 'other', to: 'public' },
+      ],
+    }),
   ],
 };
